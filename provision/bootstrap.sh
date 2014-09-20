@@ -25,23 +25,23 @@ sudo cp -f /usr/share/zoneinfo/$area/$zone /etc/localtime
 
 #basics (bjd- needed?)
 sudo apt-get install -y build-essential
-sudo apt-get install libc6-dev libreadline-dev libz-dev libncursesw5-dev libssl-dev libgdbm-dev libsqlite3-dev libbz2-dev liblzma-dev tk-dev
+sudo apt-get install -y libc6-dev libreadline-dev libz-dev libncursesw5-dev libssl-dev libgdbm-dev libsqlite3-dev libbz2-dev liblzma-dev tk-dev
 
 sudo apt-get install -y git-core mercurial vim screen wget curl raptor-utils unzip ack-grep
-sudo apt-get install -y tree
+sudo apt-get install -y tree vim-gnome
 
 #apache
 sudo apt-get install -y apache2
 
 #postgres
-sudo apt-get update
-sudo apt-get install postgresql postgresql-contrib
+sudo apt-get update -y
+sudo apt-get install -y postgresql postgresql-contrib
 
 #Install Python 3.4 for to run in a virtual environment
-cd ~ && wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
+cd ~ && sudo wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
 tar xvf Python-3.4.1.tar.xz
 cd Python-3.4.1
-./configure && make
+sudo ./configure && make
 
 sudo apt-get purge python-pip
 sudo apt-get install -y python-pip
@@ -69,7 +69,7 @@ mkdir -p ~/.virtualenvs
 workon py341
 
 #install necessary python packages
-pip install -r requirements.pip
+sudo pip install -r requirements.pip
 
 touch /vagrant/it_worked.txt
 echo """
