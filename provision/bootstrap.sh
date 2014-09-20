@@ -45,7 +45,7 @@ sudo ./configure && make
 
 sudo apt-get purge python-pip
 sudo apt-get install -y python-pip
-sudo pip install -y virtualenv virtualenvwrapper
+sudo pip install virtualenv virtualenvwrapper
 sudo apt-get update -y
 
 ## end main server installs ##
