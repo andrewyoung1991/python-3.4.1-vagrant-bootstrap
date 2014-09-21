@@ -54,17 +54,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 """ >> ~/.bashrc
 source ~/.bashrc
 
-sudo echo """
-quickrun = python manage.py runserver 0.0.0.0:8000 --settings=settings.local
-""" >> ~/.bash_profile
-source ~/.bash_profile
-
 #Install Python 3.4 for to run in a virtual environment
 cd ~ 
 sudo wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
 sudo tar xvf Python-3.4.1.tar.xz
 cd Python-3.4.1
-sudo ./configure && make
+sudo ./configure
+sudo make
 
 #Create a virtualenv and ACTIVATE it
 ./python -m venv ~/.virtualenvs/py341
@@ -73,7 +69,6 @@ workon py341
 #install necessary python packages
 sudo pip install -r requirements.pip
 
-sudo touch /vagrant/it_worked.txt
 sudo echo """
 looks like everything worked. you now have a virtual environment named
 py341 running python 3.4.1 with django 1.7 installed and all of the support for
