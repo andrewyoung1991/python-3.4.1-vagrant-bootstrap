@@ -55,11 +55,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 source /home/vagrant/.bashrc
 
 sudo echo """ 
-quickrun = python manage.py runserver 0.0.0.0:8000 --settings=settings.local
+alias quickrun="python manage.py runserver 0.0.0.0:8000 --settings=settings.local"
 """ >> /home/vagrant/.profile
 source /home/vagrant/.profile
+
 #Install Python 3.4 for to run in a virtual environment
-cd /home
+cd /home/vagrant/
 sudo wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
 sudo tar xvf Python-3.4.1.tar.xz
 cd Python-3.4.1
