@@ -47,8 +47,8 @@ sudo apt-get update -y
 ## virtualenv work ##
 
 sudo echo """ 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/dev
 export DJANGO_SETTINGS_MODULE=settings
 source /usr/local/bin/virtualenvwrapper.sh
 """ >> ~/.bashrc
