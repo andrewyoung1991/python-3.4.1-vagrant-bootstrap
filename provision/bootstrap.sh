@@ -51,11 +51,15 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/dev
 export DJANGO_SETTINGS_MODULE=settings
 source /usr/local/bin/virtualenvwrapper.sh
-""" >> ~/.bashrc
-source ~/.bashrc
+""" >> /home/vagrant/.bashrc
+source /home/vagrant/.bashrc
 
+sudo echo """ 
+quickrun = python manage.py runserver 0.0.0.0:8000 --settings=settings.local
+""" >> /home/vagrant/.profile
+source /home/vagrant/.profile
 #Install Python 3.4 for to run in a virtual environment
-cd ~ 
+cd /home
 sudo wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
 sudo tar xvf Python-3.4.1.tar.xz
 cd Python-3.4.1
@@ -63,7 +67,7 @@ sudo ./configure
 sudo make
 
 #Create a virtualenv and ACTIVATE it
-./python -m venv ~/.virtualenvs/py341
+./python -m venv home/vagrant/.virtualenvs/py341
 workon py341
 
 #install necessary python packages
@@ -74,7 +78,7 @@ looks like everything worked. you now have a virtual environment named
 py341 running python 3.4.1 with django 1.7 installed and all of the support for
 a postgresql database configured. type quickrun to runserver on 'dev:8000'. 
 so get to work.
-""" >> /vagrant/it_worked.txt
+""" >> /home/vagrant/it_worked.txt
 ## end virtualenv work ##
 
 echo "---"
