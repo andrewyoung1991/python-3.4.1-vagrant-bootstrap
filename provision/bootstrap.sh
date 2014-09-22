@@ -35,7 +35,7 @@ sudo apt-get install -y apache2
 
 #postgres
 sudo apt-get update -y
-sudo apt-get install -y postgresql postgresql-contrib
+sudo apt-get install -y libpq-dev postgresql postgresql-contrib
 
 sudo apt-get purge python-pip
 sudo apt-get install -y python-pip
@@ -54,32 +54,21 @@ source /usr/local/bin/virtualenvwrapper.sh
 """ >> /home/vagrant/.bashrc
 source /home/vagrant/.bashrc
 
-sudo echo """ 
-alias quickrun="python manage.py runserver 0.0.0.0:8000 --settings=settings.local"
-""" >> /home/vagrant/.profile
-source /home/vagrant/.profile
-
 #Install Python 3.4 for to run in a virtual environment
 cd /home/vagrant/
 sudo wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
-sudo tar xvf Python-3.4.1.tar.xz
+sudo tar -xvf Python-3.4.1.tar.xz
 cd Python-3.4.1
 sudo ./configure
-sudo make
+make && sudo make install
 
 #Create a virtualenv and ACTIVATE it
-./python -m venv home/vagrant/.virtualenvs/py341
+sudo pyenv-3.4 ~/.virtualenvs/py341 
 workon py341
 
 #install necessary python packages
-sudo pip install -r requirements.pip
+sudo pip install -r /vagrant/requirements.pip
 
-sudo echo """
-looks like everything worked. you now have a virtual environment named
-py341 running python 3.4.1 with django 1.7 installed and all of the support for
-a postgresql database configured. type quickrun to runserver on 'dev:8000'. 
-so get to work.
-""" >> /home/vagrant/it_worked.txt
 ## end virtualenv work ##
 
 echo "---"
