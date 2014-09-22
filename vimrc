@@ -28,6 +28,10 @@ noremap <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
 inoremap <C-n> :nohl<CR>
 
+" Quick save command
+noremap <C-Z> :update<CR>
+vnoremap <C-Z> <C-C>:update<CR>
+inoremap <C-Z> <C-O>:update<CR>
 
 " Quick quit command
 noremap <Leader>e :quit<CR>  " Quit current window
@@ -71,6 +75,11 @@ set t_Co=256
 color wombat256mod
 
 
+" easier formatting of paragraphs                                             
+vmap Q gq                                                                       
+nmap Q gqap   
+
+
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
 filetype off
@@ -82,10 +91,16 @@ syntax on
 set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
-set fo-=t   " don't automatically wrap text when typing
+set formatoptions-=t   " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
+" paragraph wrapping
+vmap Q gq
+nmap Q gqap
+" paragraph wrapping
+vmap Q gq
+nmap Q gqap
 
 " Useful settings
 set history=700
