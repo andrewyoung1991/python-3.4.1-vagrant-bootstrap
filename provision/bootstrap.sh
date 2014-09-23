@@ -84,7 +84,7 @@ sudo wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src
 sudo curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 #installing python ide stuffs
-cd ~/.vim/bundle
+cd ~/.vim/bundles
 sudo git clone git://github.com/Lokaltog/vim-powerline.git
 sudo git clone https://github.com/kien/ctrlp.vim.git
 sudo git clone git://github.com/davidhalter/jedi-vim.git
