@@ -3,3 +3,4 @@ django-debug-toolbar==1.2.1
 ipython==2.2.0
 ipdb==0.8
 pep8==1.5.7
+pyvirtualdisplay==0.1.5

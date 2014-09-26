@@ -31,7 +31,7 @@ sudo apt-get install -y git-core mercurial vim screen wget curl raptor-utils unz
 sudo apt-get install -y tree vim-gnome
 
 #apache
-sudo apt-get install -y apache2 Xvfb iceweasel
+sudo apt-get install -y apache2 xvfb firefox 
 
 #postgres
 sudo apt-get update -y
