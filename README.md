@@ -40,4 +40,5 @@ the box is provisioned with a static url for added security so you must add
 #### RUNNING THE DEV SERVER
 running the python server might be differnt then you are used to. we need the
 box to be available on all ports so we will append '0.0.0.0:8000' to the normal
-runserver message.
+runserver message. the __ will be available through your host machine at
+```http://dev:8000/```

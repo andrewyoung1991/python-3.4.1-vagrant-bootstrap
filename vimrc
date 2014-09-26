@@ -98,9 +98,6 @@ highlight ColorColumn ctermbg=233
 " paragraph wrapping
 vmap Q gq
 nmap Q gqap
-" paragraph wrapping
-vmap Q gq
-nmap Q gqap
 
 " Useful settings
 set history=700
