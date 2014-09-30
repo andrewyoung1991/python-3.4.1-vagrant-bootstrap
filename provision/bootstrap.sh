@@ -23,14 +23,14 @@ sudo cp -f /usr/share/zoneinfo/$area/$zone /etc/localtime
 
 ## main server installs ##
 
-#basics (bjd- needed?)
+#basics
 sudo apt-get install -y build-essential
 sudo apt-get install -y libc6-dev libreadline-dev libz-dev libncursesw5-dev libssl-dev libgdbm-dev libsqlite3-dev libbz2-dev liblzma-dev tk-dev
 
 sudo apt-get install -y git-core mercurial vim screen wget curl raptor-utils unzip ack-grep
 sudo apt-get install -y tree vim-gnome
 
-#apache
+#apache, xvfb and firefox for selenium functional testing
 sudo apt-get install -y apache2 xvfb firefox 
 
 #postgres
@@ -50,6 +50,7 @@ sudo echo """
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/dev
 export DJANGO_SETTINGS_MODULE=settings
+export SOME_SECRET_KEY=d0nt-t0uch-my-1ce-cr34m
 source /usr/local/bin/virtualenvwrapper.sh
 """ >> /home/vagrant/.bashrc
 source /home/vagrant/.bashrc
@@ -90,6 +91,10 @@ sudo git clone https://github.com/kien/ctrlp.vim.git
 sudo git clone git://github.com/davidhalter/jedi-vim.git
 mkdir -p ~/.vim/ftplugin
 sudo wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+
+#install jedi submodule
+cd ~/.vim/bundle/jedi-vim  
+git submodule update --init
 
 #move packaged .vimrc into place
 sudo mv /vagrant/vimrc ~/.vimrc
