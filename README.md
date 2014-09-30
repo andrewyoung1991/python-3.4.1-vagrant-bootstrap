@@ -39,6 +39,11 @@ the box is provisioned with a static url for added security so you must add
 '192.168.234.131 dev' to your hostsfile.
 #### RUNNING THE DEV SERVER
 running the python server might be differnt then you are used to. we need the
-box to be available on all ports so we will append '0.0.0.0:8000' to the normal
-runserver message. the django server will be available through your host machine at
-"http://dev:8000/"
+box to be available on all ports so we will append '0.0.0.0:8000
+--settings=django_prod.settings.local' to the normal runserver message. i 
+recomend you wrap the former shell script into an environment variable in your 
+.bashrc or .bash_profile. the django server will be available through your 
+host machine at "http://dev:8000/".
+## GO WILD
+please, this is a template for quickly booting a project so extend or remove
+as much as you need to get it right for your workflow.
