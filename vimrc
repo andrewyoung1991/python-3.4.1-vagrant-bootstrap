@@ -95,9 +95,6 @@ set formatoptions-=t   " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
-" paragraph wrapping
-vmap Q gq
-nmap Q gqap
 
 " Useful settings
 set history=700

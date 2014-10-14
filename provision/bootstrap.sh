@@ -94,7 +94,7 @@ sudo wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/downl
 
 #install jedi submodule
 cd ~/.vim/bundle/jedi-vim  
-git submodule update --init
+sudo git submodule update --init
 
 #move packaged .vimrc into place
 sudo mv /vagrant/vimrc ~/.vimrc
