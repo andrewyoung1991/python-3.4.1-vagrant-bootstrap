@@ -1,3 +1,5 @@
+# andrew young
+from __future__ import absolute_import
 from .base import *
 
 DEBUG = True
@@ -7,10 +9,9 @@ DATABASES = {
     "default" : {
         "ENGINE": "django.db.backends.postgresql_psycopg2", 
         "NAME": "django_db", 
-        "USER": ,
-        "PASSWORD": ,
-        "HOST": ,
-        "PORT": ,
+        "USER": "django_user",
+        "PASSWORD": "check",
+        "HOST": "127.0.0.1",
     }        
 }
 

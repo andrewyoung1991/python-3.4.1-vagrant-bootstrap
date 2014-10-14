@@ -1,6 +1,17 @@
+# functional testing
 selenium==2.43.0
-django-debug-toolbar==1.2.1
+xvfbwrapper==0.2.4
+
+# debugging
 ipython==2.2.0
 ipdb==0.8
 pep8==1.5.7
-pyvirtualdisplay==0.1.5
+django-debug-toolbar==1.2.1
+
+# utility
+django-test-exclude==0.1.0
+proofread==0.1.2
+coverage==3.7.1
+
+# models makers
+model_mommy==1.2.2

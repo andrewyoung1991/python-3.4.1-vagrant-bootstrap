@@ -64,14 +64,14 @@ sudo ./configure
 make && sudo make install
 
 #Create a virtualenv and ACTIVATE it
-sudo pyenv-3.4 ~/.virtualenvs/py341 
-workon py341
+sudo pyvenv-3.4 ~/.virtualenvs/py341 
+#workon py341
 
 #install necessary python packages
-sudo pip install -r /vagrant/requirements/base.pip
-sudo pip install -r /vagrant/requirments/local.pip
+#sudo pip install -r /vagrant/requirements/base.pip
+#sudo pip install -r /vagrant/requirments/local.pip
 
-sudo deactivate
+#sudo deactivate
 
 #finished with virtualenv work
 
