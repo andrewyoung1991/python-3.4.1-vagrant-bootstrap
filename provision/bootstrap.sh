@@ -64,40 +64,33 @@ sudo ./configure
 make && sudo make install
 
 #Create a virtualenv and ACTIVATE it
-sudo pyvenv-3.4 ~/.virtualenvs/py341 
-#workon py341
-
-#install necessary python packages
-#sudo pip install -r /vagrant/requirements/base.pip
-#sudo pip install -r /vagrant/requirments/local.pip
-
-#sudo deactivate
+sudo pyvenv-3.4 /home/vagrant/.virtualenvs/py341 
 
 #finished with virtualenv work
 
 #set up vim stuff :)
-mkdir ~/.vim && mkdir ~/.vim/{autoload,bundle}
-mkdir -p ~/.vim/colors && cd ~/.vim/colors
+mkdir /home/vagrant/.vim && mkdir /home/vagrant/.vim/{autoload,bundle}
+mkdir -p /home/vagrant/.vim/colors && cd /home/vagrant/.vim/colors
 
 #installing color theme
 sudo wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 #install pathogen
-sudo curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+sudo curl -so /home/vagrant/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 #installing python ide stuffs
-cd ~/.vim/bundle
+cd /home/vagrant/.vim/bundle
 sudo git clone git://github.com/Lokaltog/vim-powerline.git
 sudo git clone https://github.com/kien/ctrlp.vim.git
 sudo git clone git://github.com/davidhalter/jedi-vim.git
-mkdir -p ~/.vim/ftplugin
-sudo wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
+mkdir -p /home/vagrant/.vim/ftplugin
+sudo wget -O /home/vagrant/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 
 #install jedi submodule
-cd ~/.vim/bundle/jedi-vim  
+cd /home/vagrant/.vim/bundle/jedi-vim  
 sudo git submodule update --init
 
 #move packaged .vimrc into place
-sudo mv /vagrant/vimrc ~/.vimrc
+sudo mv /vagrant/.vimrc /home/vagrant/.vimrc
 
 echo "---"
 echo "---"

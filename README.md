@@ -26,7 +26,7 @@ folder just run :
 ```$ cd /vagrant/```
 
 ### INSTALL REQUIREMENTS
-now run ```$ pip install -r requirements/*```. be sure to add or subtract from these
+now run ```$ pip install -r requirements/...```. be sure to add or subtract from these
 basic requirements (those i use for the early stages of my projects).
 
 ### POSTGRESQL
