@@ -25,6 +25,10 @@ you will be greated by the machines home directory. to move to the shared
 folder just run :
 ```$ cd /vagrant/```
 
+### INSTALL REQUIREMENTS
+now run ```$ pip install -r requirements/*```. be sure to add or subtract from these
+basic requirements (those i use for the early stages of my projects).
+
 ### POSTGRESQL
 the box comes with a postgres server all ready to go, to create a user (so you
 don't have to log in as the default postgres user) run :
@@ -36,7 +40,7 @@ simply run ```$ createdb <...databasename...>```
 
 ### THE SERVER
 the box is provisioned with a static url for added security so you must add
-'192.168.234.131 dev' to your hostsfile.
+'192.168.234.131 dev' to your host machine hostsfile.
 #### RUNNING THE DEV SERVER
 running the python server might be differnt then you are used to. we need the
 box to be available on all ports so we will append '0.0.0.0:8000
